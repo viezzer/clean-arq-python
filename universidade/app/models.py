@@ -4,6 +4,8 @@ import uuid
 # Create your models here.
 class Universidade(models.Model):
     nome = models.CharField(max_length=100)
+    def __str__(self):
+        return self.nome
     
 class Curso(models.Model):
     nome = models.CharField(max_length=30)
@@ -35,4 +37,6 @@ class Matricula(models.Model):
 
     class Meta:
         unique_together = ('aluno', 'semestre')
+
+        
     
