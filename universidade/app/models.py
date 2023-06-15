@@ -26,6 +26,7 @@ class Aluno(models.Model):
     sobrenome = models.CharField(max_length=30)
     email = models.EmailField()
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE, default=None)
+    universidade = models.ForeignKey(Universidade, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome
@@ -37,6 +38,9 @@ class Matricula(models.Model):
 
     class Meta:
         unique_together = ('aluno', 'semestre')
+
+    def __str__(self):
+        return f"{self.aluno} - {self.disciplina} - {self.semestre} semestre"
 
         
     
