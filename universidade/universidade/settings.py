@@ -81,10 +81,24 @@ WSGI_APPLICATION = 'universidade.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pas',
+        'USER': 'pas',
+        'PASSWORD': 'paspaspas123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
+    'sensitive_db': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pas_sigiloso',
+        'USER': 'pas',
+        'PASSWORD': 'paspaspas123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
+DATABASE_ROUTERS = ['universidade.database_routers.DatabaseRouter']
 
 
 # Password validation
