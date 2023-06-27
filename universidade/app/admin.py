@@ -108,7 +108,7 @@ class UniversidadeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Aluno, AlunoAdmin)
-admin.site.register(Universidade, UniversidadeAdmin)
+admin.site.register(Universidade)
 admin.site.register(Curso)
 admin.site.register(Disciplina)
 # admin.site.register(Aluno)
