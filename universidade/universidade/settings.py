@@ -30,6 +30,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.35.241',
     '192.168.1.6',
+    '192.168.152.21',
+    '10.20.44.239',
 ]
 
 
@@ -81,12 +83,8 @@ WSGI_APPLICATION = 'universidade.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pas',
-        'USER': 'pas',
-        'PASSWORD': 'paspaspas123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     },
     'sensitive_db': {
         'ENGINE': 'django.db.backends.postgresql',
